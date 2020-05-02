@@ -1,6 +1,6 @@
-# ResearchPaperRecommendation **FindIt**
+# ResearchPaperRecommendation - FindIt
 
-FindIt is a software project designed to recommend research papers and articles based upon a given query.The algorithm currently uses tfidf algorithm to extract the best score papers from the database.
+FindIt is a software project designed to recommend research papers and articles based upon a given query.The system currently uses tfidf algorithm to extract the best score papers from the database.
 
 ## Prerequisites :
 - [mongodb](https://docs.mongodb.com/manual/administration/install-community/)
@@ -48,6 +48,9 @@ Follow the local url displayed.A FindIt website will be hosted.Create an account
 A list of papers is displayed.You can add more papers into your database and make it extensive.
 
 ## Future Work
+
 1.Currently the system does not take into account the previous searches of the current user and those of other users.MThe algorithm will be further updated to take this into account
+
 2.Optimisation of existing algorithm will be done to improve upon the searching speed.
+
 3.More features will be added to make the system user-friendly.
