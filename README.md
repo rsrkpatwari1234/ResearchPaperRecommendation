@@ -46,6 +46,7 @@ $python web_nlp.py
 Follow the local url displayed.A FindIt website will be hosted.Create an account if you do not have one.User need to signnIn to go to the search query page.Option is also provided to make changes in profile settings including uploading a profile picture and changing profession and workplace.
 
 A list of papers is displayed.You can add more papers into your database and make it extensive.
+A Url search option is provided which enables to open the desired paper by typing its Url in the search bar.
 
 ## Future Work
 
