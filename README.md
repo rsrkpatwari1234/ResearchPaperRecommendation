@@ -6,6 +6,7 @@
 ## Creating the database
 1.Go to the directory where mongoDB is installed and start the mongoDB service to open the mongo shell
   > cd /path/to/mongodb
+  
 > sudo systemctl start mongo
 > mongo 
 2.Create a new database "recom" 
