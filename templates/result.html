@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Result page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="../static/img/home/search.jpg"/>
+    <link rel="stylesheet" href="../static/css/result/style.css">
+    
+  </head>
+  <body>
+  	<h1 style="border-top-style: solid;border-top-width: 50px;margin-bottom: 50px; color: #1F2739">
+    	<span class="blue" style="margin-left: 600px;">Recommended</span><span class="blue" style="margin-left: 5px;"></span><span class="yellow" style="margin-right: 630px;">Papers</span>
+    	<button type="button" style="border-top-width: 12px;
+									border-top-style: solid;
+									border-bottom-width: 12px;
+									border-bottom-style: solid;
+									border-radius: 10px;
+									background : #185875;
+									border-color: #185875;
+									margin-bottom: 30px;">
+		<a href="/logout" style="color:#000000;text-decoration: none;background-color: transparent;">Sign Out</a>
+		</button>
+
+    	<form method="POST" action="/displayPaper" style="text-align: -moz-right;">
+
+			<input type="url" name="urlSearch" placeholder="Enter Url to be searched" style="border-top-style:solid;padding-bottom: 1px;padding-top: -3px;border-top-width: 2px;height: 35px;border-radius: 10px;padding-left: 5px; " required>
+			<input type="submit" value="Submit Url" method="POST" action="/displayPaper" 
+			style="border-top-style: solid;
+					border-bottom-style: solid;
+					border-bottom-width: 10px;
+					padding-left: 3px;
+					padding-right: 3px;
+					border-radius: 10px;
+					border-top-width: 12px;
+					border-left-width: 5px;
+					border-left-style: solid;
+					border-right-width: 5px;
+					border-right-style: solid;
+					color: #000000;
+					background : #FFF842;
+					border-color: #FFF842;">
+		</form>
+        
+			
+    </h1>
+    <table class="container">
+			<thead>
+				<tr>
+					<th><h1>Title</h1></th>
+					<th><h1>Publisher </h1></th>
+					<th><h1>Published Year  </h1></th>
+					<th><h1>Journal</h1></th>
+					<th><h1>H-Index</h1></th>
+					<th><h1>Url</h1></th>
+				</tr>
+			</thead>
+
+			<tbody>
+			     {% for record in tasks %}
+			     <tr>
+			        <td>{{record['Title of research paper']}}</td>
+					<td style="text-align: center;padding-left: 0px;">{{record['Publisher']}}</td>
+					<td style="text-align: center;padding-left: 0px;">{{record['Published year']}}</td>
+					<td>{{record['Journal']}}</td>
+					<td style="text-align: center;padding-left: 0px;">{{record['H-index']}}</td>
+					<td>{{record['Url']}}</td> 
+			     </tr>
+			     {% endfor %}
+		    </tbody>
+	</table>
+
+   </body>
+</html>
+

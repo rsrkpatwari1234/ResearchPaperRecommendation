@@ -1,0 +1,66 @@
+<html>
+  <head>
+     <title>FindIt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="../static/img/home/search.jpg"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="../static/css/welcome_user/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="s01">
+      <form method="POST" action="/result">
+        <fieldset>
+          <legend>Welcome <span style="color:#FFFF00">{{ variable }}<span><span style="color:#fff">!!
+            </span></legend>
+        </fieldset>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <input name="query" id="search" type="text" placeholder="Enter the title to be searched" required/>
+            <!-- <select name="query" id="search" type="text" placeholder="Enter the title to be searched" required/>
+                <option>Enter the title to be searched</option>  
+                <option>Monte carlo method</option>  
+                <option>MPC</option>  
+                <option>Markov chain</option>
+                <option>ICP localization</option>
+            </select> -->
+          </div>
+          <div class="input-field second-wrap">
+            <input name="publisher" id="location" type="text" placeholder="Enter preferred publisher" />
+            <!-- <select name="publisher" id="location" type="text" placeholder="Enter preferred publisher" />
+                <option>Enter preferred publisher</option>  
+                <option>IEEE</option>  
+                <option>Springer link</option>  
+                <option>Wiley</option>
+                <option>ASA</option>
+                <option>ACS</option>
+                <option>Elsevier</option>
+                <option>Springer verlag</option>
+            </select> -->
+          </div>
+          
+        </div>
+
+        <div class="inner-form">
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="submit" style="margin-top: -70px;">Search</button>
+          </div>
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="button" style="margin-left: 280px;background-color: #FF4500;margin-top: -70px;"><a href="/logout" style="color:#fff;text-decoration: none">Sign Out</a></button>
+          </div>
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="button" style="margin-left: -30px;background-color: #FF4500;margin-top: -70px;"><a href="/profile" style="color:#fff;text-decoration: none">User Profile</a></button>
+          </div>
+        </div>
+
+        </div>
+        
+      </form>
+    </div>
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
