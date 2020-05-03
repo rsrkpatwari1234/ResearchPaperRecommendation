@@ -26,14 +26,17 @@ print ("MongoDB Database:", mongo.db)
 
 # calling html pages
 
+# home page
 @app.route('/')
 def index():
 	return render_template('index.html')
 
+# about page
 @app.route('/about')
 def about():
 	return render_template('about.html')
 
+# journal page
 @app.route('/journal')
 def journal():
 	return render_template('publisher.html')
@@ -46,6 +49,7 @@ def journal():
 # def signUp():
 #     return render_template('signup.html')
 
+# contact page
 @app.route('/contact')
 def contact():
 	return render_template('contact.html')
@@ -60,11 +64,13 @@ def welcome():
 
 	return render_template('index.html')
 
+# profile page
 @app.route('/profile')
 def profile():
 	user_data = mongo.db.users.find_one({'name' : session['username']})
 	return render_template('profile.html',user_data=user_data)
 
+# save changes page
 @app.route('/save_changes',methods=['POST','GET'])
 def saveChange():
 	users = mongo.db.users
@@ -91,6 +97,7 @@ def saveChange():
 	return render_template('profile.html',user_data=new_data)
 
 
+# result page
 @app.route('/result',methods=['POST','GET'])
 def searchPaper():
 	searchPaper = request.form['query']
@@ -111,10 +118,12 @@ def searchPaper():
 			return render_template('no_result.html')
 		return render_template('result.html',tasks=find_paper)
 
+# signin page
 @app.route('/signin')
 def signin():
 	return render_template('signin.html')
 
+# logout page
 @app.route('/logout')
 def logout():
 	return render_template('logout.html')
@@ -166,7 +175,7 @@ def signUp():
 
 	return render_template('signup.html')
 
-
+# display paper using Url
 @app.route('/displayPaper', methods=['POST','GET'])
 def display():
 	return redirect(request.form['urlSearch'])
