@@ -16,12 +16,12 @@ $mongo
 ```
 $use recom
 ```
-3.Quit the terminal and import the datasets into your database
+3.Quit the mongo shell and import the datasets into your database.The following commands create three collections-'papers1','papers2' and 'papers3'
 ```
 $quit()
 $mongoimport --type csv -d recom -c papers1 --headerline --drop ..path/to/dataset/1_sorted.csv
 $mongoimport --type csv -d recom -c papers2 --headerline --drop ..path/to/dataset/nlp3.csv
-$mongoimport --type csv -d recom -c papers1 --headerline --drop ..path/to/dataset/nlp2.csv
+$mongoimport --type csv -d recom -c papers3 --headerline --drop ..path/to/dataset/nlp2.csv
 ```
 4.To close the mongodb server,use the following command
 ```
@@ -42,9 +42,11 @@ $deactivate
 ## Searching papers on the basis of string matching
 Make sure the mongo server is active.Also activate the virtual environment and run the following command,
 ```
+$mongo
+$source ./env/bin/activate
 $python web_nlp.py
 ```
-Follow the local url displayed.A FindIt website will be hosted.Create an account if you do not have one.User need to signnIn to go to the search query page.Option is also provided to make changes in profile settings including uploading a profile picture and changing profession and workplace.
+Follow the local url displayed.A FindIt website will be hosted.Create an account if you do not have one.User need to sign in to go to the search query page.Option is also provided to make changes in profile settings including uploading a profile picture and changing profession and workplace.
 
 A list of papers is displayed.You can add more papers into your database and make it extensive.
 A Url search option is provided which enables to open the desired paper by typing its Url in the search bar.
