@@ -53,8 +53,15 @@ A Url search option is provided which enables to open the desired paper by typin
 
 ## Future Work
 
-1.Currently the system does not take into account the previous searches of the current user and those of other users.MThe algorithm will be further updated to take this into account
+1.Presently the system does not take into account the previous searches of the current user and those of other users.The algorithm will be further updated to take this into account
 
 2.Optimisation of existing algorithm will be done to improve upon the searching speed.
 
-3.More features will be added to make the system user-friendly.
+3.The system only displays the paper topics and urls and provide the url search option using a search engine.A download paper option will be provided to enable the user to download in case required.However lack of storage space is the main problem hindering this functionality
+
+4.The abstract of the papers is taken into account while computing tfidf score.The abstract and title data are computed manually and stored in the csv file.Code for performing this task will be updated. 
+
+5.User should be allowed to upload paper if he desires.
+No uploading option has been provided yet.The user can contact me in case he wants to add some necessary paper into the database but cannot upload on its own.So this feature will be added in future versions
+
+6.More features will be added to make the system user-friendly
