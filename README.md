@@ -9,7 +9,7 @@ FindIt is a software project designed to recommend research papers and articles 
 1.Go to the directory where mongoDB is installed and start the mongoDB service to open the mongo shell
 ```
 $cd /path/to/mongodb
-$sudo systemctl start mongo
+$sudo systemctl start mongod
 $mongo
 ```
 2.Create a new database "recom" 
@@ -25,7 +25,7 @@ $mongoimport --type csv -d recom -c papers3 --headerline --drop ..path/to/datase
 ```
 4.To close the mongodb server,use the following command
 ```
-$sudo systemctl stop mongo
+$sudo systemctl stop mongod
 ```
 ## Setting Up virtual Python3 environment
 1.Follow the commands to create a environemnt "env" and activate it
@@ -65,3 +65,5 @@ A Url search option is provided which enables to open the desired paper by typin
 No uploading option has been provided yet.The user can contact me in case he wants to add some necessary paper into the database but cannot upload on its own.So this feature will be added in future versions
 
 6.More features will be added to make the system user-friendly
+
+Demo of the website is available at this youtube link : https://youtu.be/NxjUHSLsrIU 
